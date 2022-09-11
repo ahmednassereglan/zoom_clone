@@ -1,0 +1,42 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#video_grid{
+    display: flex;
+    justify-content: center;
+}
+video{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+
+    
+    background-color: #303030;
+}
+.main__left{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+.main__rigth{
+    flex: 0.2;
+}
+
+.main__videos{
+    flex-grow: 1;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_controls{
+    display: flex;
+    justify-content: center;
+    background-color: #1c1e20;
+}

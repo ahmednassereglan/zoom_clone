@@ -36,11 +36,11 @@ app.get('/:room', (req, res) => {
 });
 
 io.on('connection', socket => {
-    // console.log('a user connected');
+    console.log('a user connected');
     socket.on('join-room', (roomId , userId) => {
         socket.join(roomId); 
-        socket.broadcast.to(roomId).emit('user-connected', userId);
-        // console.log(`Success joined room ${roomId}`);
+        socket.broadcast.to(roomId).emit('user-connected');
+        console.log(`joined room ${roomId}`);
     })
   });
 

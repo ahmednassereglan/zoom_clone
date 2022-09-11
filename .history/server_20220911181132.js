@@ -18,7 +18,6 @@ app.set('view engine','ejs');
 // App using
 // app.use(express.json());
 app.use(express.static('public'));
-app.use('/peerjs',peerServer)
 
 
 
@@ -36,11 +35,11 @@ app.get('/:room', (req, res) => {
 });
 
 io.on('connection', socket => {
-    // console.log('a user connected');
-    socket.on('join-room', (roomId , userId) => {
+    console.log('a user connected');
+    socket.on('join-room', (roomId) => {
         socket.join(roomId); 
-        socket.broadcast.to(roomId).emit('user-connected', userId);
-        // console.log(`Success joined room ${roomId}`);
+        socket.broadcast.to(roomId).emit('user-connected');
+        console.log(`joined room ${roomId}`);
     })
   });
 

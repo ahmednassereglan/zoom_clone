@@ -1,0 +1,67 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#video_grid{
+    display: flex;
+    justify-content: center;
+}
+video{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+
+    
+    background-color: #303030;
+}
+.main__left{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+.main__rigth{
+    flex: 0.2;
+}
+
+.main__videos{
+    flex-grow: 1;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_controls{
+    display: flex;
+    background-color: #1c1e20;
+    color: #ccc;
+    padding: 10px;
+}
+.controls_block{
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+}
+
+.controls_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.controls_button:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.controls_button i{
+    font-size: 20px;
+    padding: 5px;
+}
+.controls_button span{
+    font-size: 10px;
+}
