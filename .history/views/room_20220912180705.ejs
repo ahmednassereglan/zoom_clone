@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+        
+    </script>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="main__left main__left_flx">
+            <div class="main__videos">
+                <div id="video_grid"></div>
+            </div>
+            <div class="main_controls">
+                <div class="controls_block">
+                    <div onclick="muteUnmute()" class="controls_button main__mute_btn">
+                        
+                    </div>
+                    <div class="controls_button">
+                        <i class="fas fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+
+                <div class="controls_block">
+                    <div class="controls_button">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="controls_button">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Participants</span>
+                    </div>
+                    
+                    <!-- <button id="btn__chat" class="controls_button">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </button> -->
+                    <div id="btn__chat" class="controls_button">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+
+                <div class="controls_block">
+                    <span class="leave_meeting">Leave Meeting</span>
+                </div>
+            </div>
+        </div>
+        <div class="main__right main__right_dis">
+            <div class="main__header">
+                <h6>Chat</h6>
+            </div>
+            <div class="main__chat_window">
+                <ul id="chat_messages" class="messages">
+                    
+                </ul>
+            </div>
+            <div class="main__message_container">
+                <span id="name_chat_message"></span>
+                <input id="chat_message" type="text" placeholder="Type Message Here">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

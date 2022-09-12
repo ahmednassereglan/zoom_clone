@@ -1,0 +1,126 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* the left section */
+
+#video_grid{
+    display: flex;
+    justify-content: center;
+}
+video{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+
+    
+    background-color: #303030;
+}
+.main__left{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main__videos{
+    flex-grow: 1;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_controls{
+    display: flex;
+    background-color: #1c1e20;
+    color: #ccc;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .controls_block:hover{
+    
+    transition: all 0.3s ease-in-out;
+} */
+
+.controls_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0px;
+    min-width: 70px;
+    cursor: pointer;
+}
+.controls_button:hover{
+    background-color: #3d4042;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.controls_button i{
+    font-size: 23px;
+
+}
+.controls_button span{
+    font-size: 13px;
+    padding: 3px 0px;
+}
+
+.leave_meeting{
+    color: #eb534b;
+    padding: 8px 3px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.leave_meeting:hover{
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* the right section */
+
+.main__right{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    flex: 0.2;
+    border-left: 1px solid #3d3d42 ;
+    background-color: #242324;
+    color: #fff;
+
+}
+
+.main__header{
+    text-align: center;
+}
+
+.main__chat_window{
+
+}
+
+.main__chat_window .messages{
+
+}
+
+.main__message_container{
+
+}
+
+.main__message_container #chat_message{
+
+}
